@@ -1,7 +1,5 @@
 AllCops:
   TargetRubyVersion: 2.4
-  DisplayCopNames: true
-  DisplayStyleGuide: true
   Include:
     - Rakefile
     - Gemfile
@@ -71,7 +69,7 @@ Style/FrozenStringLiteralComment:
 Style/GuardClause:
   Enabled: false
 
-# blockないの最大行数の指定
+# block内の最大行数の指定
 Metrics/BlockLength:
   Max: 50
 
