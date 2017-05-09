@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bcrypt',         '3.1.11'
 gem 'bootstrap-sass', '3.3.6'
 gem 'coffee-rails',   '4.2.1'
 gem 'jbuilder',       '2.4.1'
