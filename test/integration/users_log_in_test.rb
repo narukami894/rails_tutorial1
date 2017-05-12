@@ -20,6 +20,7 @@ class UsersLogInTest < ActionDispatch::IntegrationTest
     delete log_out_path
     assert_not is_logged_in?
     assert_redirected_to root_path
+    delete log_out_path
     follow_redirect!
     assert_select 'a[href=?]', log_in_path
     assert_select 'a[href=?]', log_out_path,     count: 0
@@ -36,5 +37,15 @@ class UsersLogInTest < ActionDispatch::IntegrationTest
     assert_select 'div.alert-danger'
     get root_path
     assert flash.empty?
+  end
+
+  test 'login with remembering' do
+    log_in_as(@user)
+    assert_equal cookies['remember_token'], assigns(:user).remember_token
+  end
+
+  test 'login without remembering' do
+    log_in_as(@user, remember_me: '0')
+    assert_nil cookies['remember_token']
   end
 end
