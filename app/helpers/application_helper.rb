@@ -7,4 +7,8 @@ module ApplicationHelper
       page_title + ' | ' + base_title
     end
   end
+
+  def button_text(page_title)
+    page_title == new ? 'Create My Account' : 'Save Changes'
+  end
 end

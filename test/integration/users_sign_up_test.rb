@@ -18,7 +18,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
 
   test 'invalid sign_up information' do
     get sign_up_path
-    assert_select 'form[action="/sign_up"]'
+    assert_select 'form[action="/users"]'
     assert_no_difference 'User.count' do
       post sign_up_path, params: { user: { name: '',
                                            email: 'user@invalid',
