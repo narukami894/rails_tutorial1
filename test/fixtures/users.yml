@@ -4,20 +4,33 @@ hoge:
   email: hoge@fuga.com
   password_digest: <%= User.digest('password') %>
   admin: true
+  activated: true
+  activated_at: <%= DateTime.now %>
 
 piyo:
   name: piyo
   email: piyo@mogo.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= DateTime.now %>
 
 lana:
   name: Lana Kane
   email: hands@example.gov
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= DateTime.now %>
 
 malory:
   name: Malory Archer
   email: boss@example.gov
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= DateTime.now %>
+
+aho:
+  name: aho
+  email: aho@boke.com
   password_digest: <%= User.digest('password') %>
 
 <% 30.times do |n| %>
@@ -25,4 +38,6 @@ user_<%= n %>:
   name:  <%= "User #{n}" %>
   email: <%= "user-#{n}@example.com" %>
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= DateTime.now %>
 <% end %>
