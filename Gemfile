@@ -7,6 +7,7 @@ gem 'coffee-rails',            '4.2.1'
 gem 'faker',                   '1.6.6'
 gem 'jbuilder',                '2.4.1'
 gem 'jquery-rails',            '4.1.1'
+gem 'mysql2', '0.3.18'
 gem 'puma',                    '3.4.0'
 gem 'rails',                   '5.0.1'
 gem 'sass-rails',              '5.0.6'
@@ -16,7 +17,6 @@ gem 'will_paginate',           '3.1.0'
 
 group :development, :test do
   gem 'byebug', '9.0.0', platform: :mri
-  gem 'mysql2', '0.3.18'
 end
 
 group :development do
@@ -37,6 +37,6 @@ end
 # group :production do
 #   gem 'pg', '0.18.4'
 # end
-
+#
 # for Windows
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
