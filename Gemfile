@@ -34,6 +34,10 @@ group :test do
   gem 'rails-controller-testing', '0.1.1'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 # group :production do
 #   gem 'pg', '0.18.4'
 # end
