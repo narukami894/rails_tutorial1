@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password:
+  password: hogehoge
   socket: /tmp/mysql.sock
 
 development:
@@ -51,4 +51,4 @@ production:
   <<: *default
   database: rails_tutorial_production
   username: rails_tutorial
-  password: <%= ENV['RAILS_TUTORIAL_DATABASE_PASSWORD'] %>
+  # password: <%= ENV['RAILS_TUTORIAL_DATABASE_PASSWORD'] %>
