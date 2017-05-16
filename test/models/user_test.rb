@@ -95,7 +95,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not hoge.following?(piyo)
   end
 
-  test "feed should have the right posts" do
+  test 'feed should have the right posts' do
     hoge = users(:hoge)
     piyo = users(:piyo)
     lana = users(:lana)
